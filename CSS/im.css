@@ -1,0 +1,18 @@
+#selectors {
+    display: flex;
+    justify-content: center;
+}
+.btmg {
+    width: 80px;
+}
+.stack {
+    display: flex;
+    flex-direction: column;
+    margin: 1em;
+    padding: 20px 40px;
+}
+#score {
+}
+.h1{
+    text-align: center;
+}
