@@ -1,10 +1,13 @@
 html{
-    background-color: rgb(4, 71, 58);
+    background: linear-gradient(darkgreen, darkslategray )  ;
+ margin: 0;
+ height: 100%;
 
 }
 .container{
     display: flex;
 flex-direction: column;
+height: 100%;
 }
 #selectors {
     display: flex;
@@ -39,8 +42,9 @@ h1{
     padding-bottom: 1em;
     padding-left: 2em;
     margin: 0 1em;
-    background-color: rgb(47, 79, 79, 0.3);
+    background:linear-gradient(#2f4f4f4d, black) ;
     border-radius: 0.5em;
+    color:white;
 
 }
 .fisc{
@@ -67,6 +71,9 @@ button{
     border: none;
     margin: 1em;
     background-color: rgb(4, 71, 58);
+    border-radius: 2em;
+    color: white;
+
 
 }
 button:active{
@@ -78,8 +85,9 @@ button:hover{
     border-radius: 2em;
 }
 #centerou{
-    background-color: rgb(47, 79, 79, 0.3);
+    background: linear-gradient(darkslategray, black);
     border-radius: 0.5em;
     padding: 0.1em 1em;
     text-align: center;
+    color: white;
 }
