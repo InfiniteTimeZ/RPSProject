@@ -1,5 +1,5 @@
 html{
-    background: linear-gradient(darkgreen, darkslategray )  ;
+    background-color: darkslategray;
  margin: 0;
  height: 100%;
 
@@ -38,19 +38,23 @@ h1{
 .row{
     display: flex;
     justify-content: space-around;
+    align-items: center;
     font-size: 2.5em;
     padding-bottom: 1em;
     padding-left: 2em;
-    margin: 0 1em;
+    margin: 0 em;
     background:linear-gradient(#2f4f4f4d, black) ;
     border-radius: 0.5em;
     color:white;
+    flex-wrap: wrap;
+    padding-right: 30px;
+    padding-left: 30px;
 
 }
 .fisc{
     display: flex;
     flex-direction: column;
-
+text-align: center;
 }
 .score{
     text-align: center;
@@ -81,7 +85,7 @@ button:active{
 
 }
 button:hover{
-    background-color: rgb(47, 79, 79, 0.3);
+    background-color: rgba(35, 109, 109, 0.3);
     border-radius: 2em;
 }
 #centerou{
@@ -91,3 +95,28 @@ button:hover{
     text-align: center;
     color: white;
 }
+.goal{
+    display: flex;
+    align-items: center;
+    border-top: white solid;
+    border-bottom: white solid;
+    margin: 10px 0;
+}
+h1{
+    font-weight: bold;
+    font-size: 3em;
+}
+.fisc{
+    border-bottom: white solid;
+}
+#selectors{
+    display: flex;
+    flex-wrap: wrap;
+}
+#centerou{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 250px;
+    word-wrap: break-word;
+ }
