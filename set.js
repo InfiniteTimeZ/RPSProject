@@ -1,4 +1,5 @@
 
+
 const choices = ["Rock", "Paper", "Scissors"];
 let myScore = 0;
 let compScore = 0;
@@ -52,11 +53,13 @@ function compareChoice (){
     document.getElementById("result").innerHTML = loss;
     document.getElementById("cScore").innerHTML = compScore;
     cShake();
+    cShake();
 
   } else if (playerChoice === "Paper" && compC === "Scissors"){
     compScore ++;
     document.getElementById("result").innerHTML = loss;
     document.getElementById("cScore").innerHTML = compScore;
+    cShake();
     cShake();
 
 
@@ -109,6 +112,20 @@ function end(){
     document.getElementById("result").innerHTML = plWIn;
 
   }
+}
+function pShake() {
+  var pPoint = document.getElementById("pPoint");
+  pPoint.style.animation = 'none';
+  void pPoint.offsetWidth; 
+  pPoint.style.animation = 'shake 0.5s linear';
+
+}
+function cShake() {
+  var cPoint = document.getElementById("cPoint");
+  cPoint.style.animation = 'none';
+  void cPoint.offsetWidth; 
+  cPoint.style.animation = 'shake 0.5s linear';
+
 }
 function pShake() {
   var pPoint = document.getElementById("pPoint");
