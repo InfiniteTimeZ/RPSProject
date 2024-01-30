@@ -1,3 +1,4 @@
+
 const choices = ["Rock", "Paper", "Scissors"];
 let myScore = 0;
 let compScore = 0;
@@ -45,41 +46,45 @@ function getComputerChoice(){
 }
 function compareChoice (){
   if (playerChoice === compC){
-   document.getElementById("outcome").innerHTML = tie;
+   document.getElementById("result").innerHTML = tie;
   } else if (playerChoice === "Rock" && compC === "Paper"){
-    compScore ++
-    document.getElementById("outcome").innerHTML = loss;
+    compScore ++;
+    document.getElementById("result").innerHTML = loss;
     document.getElementById("cScore").innerHTML = compScore;
+    cShake();
 
   } else if (playerChoice === "Paper" && compC === "Scissors"){
     compScore ++;
-    document.getElementById("outcome").innerHTML = loss;
+    document.getElementById("result").innerHTML = loss;
     document.getElementById("cScore").innerHTML = compScore;
+    cShake();
 
 
   } else if (playerChoice === "Scissors" && compC === "Rock"){
     compScore ++;
-    document.getElementById("outcome").innerHTML = loss;
+    document.getElementById("result").innerHTML = loss;
     document.getElementById("cScore").innerHTML = compScore;
-
+    cShake();
 
   } else if (playerChoice === "Rock" && compC === "Scissors"){
     myScore ++;
     document.getElementById("pScore").innerHTML = myScore;
-    document.getElementById("outcome").innerHTML = win;
+    document.getElementById("result").innerHTML = win;
+    pShake();
 
   } else if (playerChoice === "Paper" && compC === "Rock"){
     myScore ++;
     document.getElementById("pScore").innerHTML = myScore;
-    document.getElementById("outcome").innerHTML = win;
+    document.getElementById("result").innerHTML = win;
+    pShake()
+
 
   } else if (playerChoice === "Scissors" && compC === "Paper"){
     myScore ++;
-    console.log(myScore)
     document.getElementById("pScore").innerHTML = myScore;
-    document.getElementById("outcome").innerHTML = win;
-
-  } 
+    document.getElementById("result").innerHTML = win;
+    pShake();
+}
 }
 function playRound(){
    curRound ++;
@@ -91,19 +96,31 @@ function playRound(){
     document.getElementById("pScore").innerHTML = myScore;
     document.getElementById("cScore").innerHTML = compScore;
     document.getElementById("round").innerHTML = curRound;
-    document.getElementById("outcome").innerHTML = " ";
+    document.getElementById("result").innerHTML = " ";
     } 
 
 }
 function end(){
   if (compScore === 3 ){
-    document.getElementById("outcome").innerHTML = compWOn;
+    document.getElementById("result").innerHTML = compWOn;
 
 
   } else if (myScore === 3){
-    document.getElementById("outcome").innerHTML = plWIn;
+    document.getElementById("result").innerHTML = plWIn;
 
-  } else
-  document.getElementById("outcome").innerHTML = " ";
+  }
+}
+function pShake() {
+  var pPoint = document.getElementById("pPoint");
+  pPoint.style.animation = 'none';
+  void pPoint.offsetWidth; 
+  pPoint.style.animation = 'shake 0.5s linear';
+
+}
+function cShake() {
+  var cPoint = document.getElementById("cPoint");
+  cPoint.style.animation = 'none';
+  void cPoint.offsetWidth; 
+  cPoint.style.animation = 'shake 0.5s linear';
 
 }
