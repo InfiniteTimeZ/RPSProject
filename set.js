@@ -48,6 +48,7 @@ function getComputerChoice(){
 function compareChoice (){
   if (playerChoice === compC){
    document.getElementById("result").innerHTML = tie;
+   tieShake() // Technically not shaking but to lazy to fix
   } else if (playerChoice === "Rock" && compC === "Paper"){
     compScore ++;
     document.getElementById("result").innerHTML = loss;
@@ -128,16 +129,23 @@ function cShake() {
 
 }
 function pShake() {
-  var pPoint = document.getElementById("pPoint");
+  let pPoint = document.getElementById("pPoint");
   pPoint.style.animation = 'none';
   void pPoint.offsetWidth; 
   pPoint.style.animation = 'shake 0.5s linear';
 
 }
 function cShake() {
-  var cPoint = document.getElementById("cPoint");
+  let cPoint = document.getElementById("cPoint");
   cPoint.style.animation = 'none';
   void cPoint.offsetWidth; 
   cPoint.style.animation = 'shake 0.5s linear';
+
+}
+function tieShake() {
+  let result = document.getElementById("result");
+  result.style.animation = 'none';
+  void result.offsetWidth; 
+  result.style.animation = 'shake 0.5s linear';
 
 }
