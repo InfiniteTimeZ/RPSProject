@@ -11,32 +11,38 @@ let loss = "You loss this round!"
 let tie = "You tied this round!"
 let compWOn = "Computer Wins!"
 let plWIn = "You won!"
+ 
+
+
 
 document.getElementById("rockChoice").addEventListener('click', function(){
   playerChoice = 'Rock';
   console.log(playerChoice);
-  playRound()
-  getComputerChoice()
-  compareChoice()
-  end()
+  click();
+  playRound();
+  getComputerChoice();
+  compareChoice();
+  end();
 });
 
 document.getElementById("paperChoice").addEventListener('click', function(){
   playerChoice = 'Paper';
   console.log(playerChoice);
-  playRound()
-  getComputerChoice()
-  compareChoice()
-  end()
+  click();
+  playRound();
+  getComputerChoice();
+  compareChoice();
+  end();
 });
 
 document.getElementById("scissorChoice").addEventListener('click', function(){
   playerChoice = 'Scissors';
   console.log(playerChoice);
-  playRound()
-  getComputerChoice()
-  compareChoice()
-  end()
+  click();
+  playRound();
+  getComputerChoice();
+  compareChoice();
+  end();
 });
 
 
@@ -107,10 +113,11 @@ function playRound(){
 function end(){
   if (compScore === 3 ){
     document.getElementById("result").innerHTML = compWOn;
-
+    lossa()
 
   } else if (myScore === 3){
     document.getElementById("result").innerHTML = plWIn;
+    wina();
 
   }
 }
@@ -148,4 +155,16 @@ function tieShake() {
   void result.offsetWidth; 
   result.style.animation = 'shake 0.5s linear';
 
+}
+function click(){
+  const cAudio = new Audio('./audio/click.mp3')
+  cAudio.play();
+}
+function wina(){
+  const wAudio = new Audio('./audio/victory.mp3')
+  wAudio.play();
+}
+function lossa(){
+  const lAudio = new Audio('./audio/sad_trombone.mp3')
+  lAudio.play();
 }
