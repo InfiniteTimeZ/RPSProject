@@ -13,16 +13,28 @@ let plWIn = "You won!"
 document.getElementById("rockChoice").addEventListener('click', function(){
   playerChoice = 'Rock';
   console.log(playerChoice);
+  playRound()
+  getComputerChoice()
+  compareChoice()
+  end()
 });
 
 document.getElementById("paperChoice").addEventListener('click', function(){
   playerChoice = 'Paper';
   console.log(playerChoice);
+  playRound()
+  getComputerChoice()
+  compareChoice()
+  end()
 });
 
 document.getElementById("scissorChoice").addEventListener('click', function(){
   playerChoice = 'Scissors';
   console.log(playerChoice);
+  playRound()
+  getComputerChoice()
+  compareChoice()
+  end()
 });
 
 
@@ -95,14 +107,3 @@ function end(){
   document.getElementById("outcome").innerHTML = " ";
 
 }
-
-const button = document.querySelector('button'); 
-
-button.addEventListener("click", function(){
-
-  playRound()
-  getComputerChoice()
-  compareChoice()
-  end()
-
-}); 
